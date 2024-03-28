@@ -5,7 +5,7 @@
 # DeFiMan : Portable Desktop Finance Manager
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Project Status](https://img.shields.io/badge/Status-In%20Development-red)
-![Last Commit](https://img.shields.io/github/last-commit/:Samestora/:DeFiMan)
+![Last Commit](https://img.shields.io/github/last-commit/Samestora/DeFiMan)
 
 ## Table of Contents
 * [Installation](#installation)
