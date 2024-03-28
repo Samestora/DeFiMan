@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -30,7 +31,7 @@ public class App extends Application {
             primaryStage.setX(event.getScreenX() - xOffset);
             primaryStage.setY(event.getScreenY() - yOffset);
         });
-
+        primaryStage.getIcons().add(new Image(App.class.getResourceAsStream("img/DeFiMan.png")));
         primaryStage.setScene(scene);
         primaryStage.setTitle("Defiman Client");
         primaryStage.setResizable(true);
