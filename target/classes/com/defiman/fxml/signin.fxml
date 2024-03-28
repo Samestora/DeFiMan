@@ -5,20 +5,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.defiman.LoginController">
+<HBox fx:id="rootHBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.defiman.SigninController">
    <children>
-      <VBox prefHeight="200.0" prefWidth="460.0" styleClass="background" stylesheets="@../style/login.css" HBox.hgrow="ALWAYS" />
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="309.0" styleClass="background-form" stylesheets="@../style/login.css" HBox.hgrow="ALWAYS">
+      <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="460.0" styleClass="background" stylesheets="@../style/signin.css" HBox.hgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="347.0" fitWidth="441.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/dot-pattern.png" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" styleClass="background-form" stylesheets="@../style/signin.css" HBox.hgrow="ALWAYS">
          <children>
             <VBox prefHeight="339.0" prefWidth="293.0">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="273.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="240.0">
                      <children>
-                        <Label fx:id="exitbutton" onMouseClicked="#exitaction" styleClass="prompt-text" stylesheets="@../style/login.css" text=" X ">
+                        <Label fx:id="exitbutton" onMouseClicked="#exitaction" styleClass="x-button" stylesheets="@../style/signin.css" text=" X ">
                            <font>
                               <Font name="Berlin Sans FB" size="18.0" />
                            </font>
@@ -28,27 +37,27 @@
                         <Insets right="7.5" top="7.5" />
                      </padding>
                   </HBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="253.0" spacing="10.0">
+                  <VBox alignment="CENTER" prefHeight="225.0" prefWidth="253.0" spacing="10.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                        <VBox alignment="CENTER" prefHeight="48.0" prefWidth="240.0" spacing="5.0">
                            <children>
-                              <Label styleClass="login-text" stylesheets="@../style/login.css" text="Username">
+                              <Label styleClass="form-text" stylesheets="@../style/signin.css" text="Username">
                                  <font>
                                     <Font name="Berlin Sans FB" size="36.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="userfield" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/login.css" />
+                              <TextField fx:id="userfield" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/signin.css" />
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                        <VBox alignment="CENTER" prefHeight="33.0" prefWidth="240.0" spacing="5.0">
                            <children>
-                              <Label styleClass="login-text" stylesheets="@../style/login.css" text="Password" />
-                              <PasswordField fx:id="passwordfield" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/login.css" />
+                              <Label styleClass="form-text" stylesheets="@../style/signin.css" text="Password" />
+                              <PasswordField fx:id="passwordfield" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/signin.css" />
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <VBox alignment="CENTER" prefHeight="78.0" prefWidth="239.0">
                            <children>
-                              <Button fx:id="loginbutton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" stylesheets="@../style/login.css" text="Sign In" />
+                              <Button fx:id="loginbutton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" stylesheets="@../style/signin.css" text="Sign In" />
                            </children>
                         </VBox>
                      </children>
@@ -58,10 +67,15 @@
                   <Insets left="20.0" right="20.0" />
                </padding>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="113.0" prefWidth="322.0" spacing="10.0">
+            <VBox alignment="TOP_CENTER" prefHeight="99.0" prefWidth="280.0" spacing="10.0">
                <children>
-                  <Label fx:id="signupbutton" onMouseClicked="#signupaction" styleClass="prompt-text" stylesheets="@../style/login.css" text=" Sign Up " />
-                  <Label fx:id="forgotbutton" onMouseClicked="#forgotpasswordaction" styleClass="prompt-text" stylesheets="@../style/login.css" text=" Forgot your password? " underline="true" />
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Label styleClass="have-you-text" stylesheets="@../style/signin.css" text="Don't have an account?" />
+                        <Label fx:id="signupbutton" onMouseClicked="#signupaction" styleClass="signup-button" stylesheets="@../style/signin.css" text=" Sign Up " />
+                     </children>
+                  </HBox>
+                  <Label fx:id="forgotbutton" onMouseClicked="#forgotpasswordaction" styleClass="forgot-button" stylesheets="@../style/signin.css" text=" Forgot your password? " />
                </children>
                <opaqueInsets>
                   <Insets />

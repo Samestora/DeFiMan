@@ -1,11 +1,40 @@
-.have-you-text{
-    -fx-text-fill: #414141b0;
-    -fx-font-family: Ubuntu;
+@font-face {
+    font-family: Ubuntu;
+    src: url('Ubuntu-Regular.ttf');
 }
 
-.sign-in{
-    -fx-text-fill: #FDFFFC;
+.background-form{
+    -fx-background-color: #FF9F1C;
+}
+
+.background{
+    -fx-background-color: #011627;
+}
+
+.x-button {
+    -fx-opacity: 1;
     -fx-font-family: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 18px;
+}
+
+.x-button:hover{
+    -fx-background-color: #fdb147;
+    -fx-font-family: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 18px;
+}
+
+.form-text{
+    -fx-opacity: 1;
+    -fx-font-familys: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 16px;
+}
+
+.form{
+    -fx-opacity: 1;
+    -fx-border-radius: 50px;
 }
 
 .button{
@@ -15,28 +44,22 @@
     -fx-background-color: #011627;
     -fx-font-size: 16px;
 }
-.prompt-text {
-    -fx-opacity: 1;
+
+.have-you-text{
+    -fx-text-fill: #414141b0;
     -fx-font-family: Ubuntu;
-    -fx-text-fill: #FDFFFC;
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
 }
 
-.prompt-text:hover{
+.signin-button{
+    -fx-text-fill: #FDFFFC;
+    -fx-font-family: Ubuntu;
+    -fx-font-size: 14px;
+}
+
+.signin-button:hover{
     -fx-background-color: #fdb147;
     -fx-font-family: Ubuntu;
     -fx-text-fill: #FDFFFC;
-    -fx-font-size: 18px;
-}
-
-.form{
-    -fx-opacity: 1;
-    -fx-border-radius: 50px;
-}
-
-.signup-text{
-    -fx-opacity: 1;
-    -fx-font-familys: Ubuntu;
-    -fx-text-fill: #FDFFFC;
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
 }

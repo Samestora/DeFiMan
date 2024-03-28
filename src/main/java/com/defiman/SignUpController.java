@@ -9,11 +9,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import java.sql.*;
+
 
 public class SignUpController {
 
@@ -32,8 +33,35 @@ public class SignUpController {
     @FXML
     private TextField userfield;
 
+    // Window draggable
+
+    private double xOffset = 0;
+    private double yOffset = 0;
+
     @FXML
-    void exitaction(MouseEvent event) {
+    private HBox rootHBox;
+
+    @FXML
+    private void initialize() {
+        // Set up event handlers for mouse press and drag
+        rootHBox.setOnMousePressed(this::onMousePressed);
+        rootHBox.setOnMouseDragged(this::onMouseDragged);
+    }
+
+    private void onMousePressed(MouseEvent event) {
+        xOffset = event.getSceneX();
+        yOffset = event.getSceneY();
+    }
+
+    private void onMouseDragged(MouseEvent event) {
+        Stage stage = (Stage) rootHBox.getScene().getWindow();
+        stage.setX(event.getScreenX() - xOffset);
+        stage.setY(event.getScreenY() - yOffset);
+    }
+
+    // All Actions
+    @FXML
+    void exitaction(MouseEvent event) throws IOException{
         Stage stage = (Stage) exitbutton.getScene().getWindow();
         stage.close();
     }
@@ -49,7 +77,7 @@ public class SignUpController {
 
     @FXML
     void tosignup(MouseEvent event) {
-
+        
     }
     
 }

@@ -5,20 +5,29 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.defiman.SignUpController">
+<HBox fx:id="rootHBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.defiman.SignUpController">
    <children>
-      <VBox prefHeight="200.0" prefWidth="460.0" styleClass="background" stylesheets="@../style/login.css" HBox.hgrow="ALWAYS" />
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="309.0" styleClass="background-form" stylesheets="@../style/login.css" HBox.hgrow="ALWAYS">
+      <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="460.0" styleClass="background" stylesheets="@../style/signup.css" HBox.hgrow="ALWAYS">
          <children>
-            <VBox prefHeight="429.0" prefWidth="285.0">
+            <ImageView fitHeight="347.0" fitWidth="441.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/dot-pattern.png" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" styleClass="background-form" stylesheets="@../style/signup.css" HBox.hgrow="ALWAYS">
+         <children>
+            <VBox prefHeight="441.0" prefWidth="279.0">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="245.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="240.0">
                      <children>
-                        <Label fx:id="exitbutton" onMouseClicked="#exitaction" styleClass="prompt-text" stylesheets="@../style/signup.css" text=" X ">
+                        <Label fx:id="exitbutton" onMouseClicked="#exitaction" styleClass="x-button" stylesheets="@../style/signup.css" text=" X ">
                            <font>
                               <Font name="Berlin Sans FB" size="18.0" />
                            </font>
@@ -28,11 +37,21 @@
                         <Insets right="7.5" top="7.5" />
                      </padding>
                   </HBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="253.0" spacing="10.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="330.0" prefWidth="239.0" spacing="10.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                        <VBox alignment="CENTER" prefHeight="52.0" prefWidth="239.0" spacing="5.0">
                            <children>
-                              <Label styleClass="signup-text" stylesheets="@../style/signup.css" text="Username">
+                              <Label styleClass="form-text" stylesheets="@../style/signup.css" text="Email">
+                                 <font>
+                                    <Font name="Berlin Sans FB" size="36.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="emailfield" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/signup.css" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="52.0" prefWidth="239.0" spacing="5.0">
+                           <children>
+                              <Label styleClass="form-text" stylesheets="@../style/signup.css" text="Username">
                                  <font>
                                     <Font name="Berlin Sans FB" size="36.0" />
                                  </font>
@@ -40,23 +59,23 @@
                               <TextField fx:id="userfield" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/signup.css" />
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                        <VBox alignment="CENTER" prefHeight="53.0" prefWidth="239.0" spacing="5.0">
                            <children>
-                              <Label styleClass="signup-text" stylesheets="@../style/signup.css" text="Password" />
+                              <Label styleClass="form-text" stylesheets="@../style/signup.css" text="Password" />
                               <PasswordField fx:id="passwordfield" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="form" stylesheets="@../style/signup.css" />
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                        <VBox alignment="CENTER" prefHeight="48.0" prefWidth="239.0">
                            <children>
                               <Button fx:id="signupbutton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#tosignup" prefHeight="30.0" prefWidth="200.0" stylesheets="@../style/signup.css" text="Sign Up" />
                            </children>
                         </VBox>
                      </children>
                   </VBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="109.0" prefWidth="239.0" spacing="10.0">
                      <children>
                         <Label styleClass="have-you-text" stylesheets="@../style/signup.css" text="Have created an account?" />
-                        <Label fx:id="signinbutton" onMouseClicked="#tosignin" styleClass="sign-in" stylesheets="@../style/signup.css" text="Sign In" />
+                        <Label fx:id="signinbutton" onMouseClicked="#tosignin" styleClass="signin-button" stylesheets="@../style/signup.css" text="Sign In" />
                      </children>
                   </HBox>
                </children>
