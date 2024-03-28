@@ -16,6 +16,11 @@
             <version>21</version>
         </dependency>
         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>21</version>
@@ -46,6 +51,18 @@
                     </execution>
                 </executions>
             </plugin>
+                    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.0</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.defiman.App</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
 </project>

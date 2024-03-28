@@ -1,0 +1,42 @@
+.have-you-text{
+    -fx-text-fill: #414141b0;
+    -fx-font-family: Ubuntu;
+}
+
+.sign-in{
+    -fx-text-fill: #FDFFFC;
+    -fx-font-family: Ubuntu;
+}
+
+.button{
+    -fx-opacity: 1;
+    -fx-font-family: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-background-color: #011627;
+    -fx-font-size: 16px;
+}
+.prompt-text {
+    -fx-opacity: 1;
+    -fx-font-family: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 18px;
+}
+
+.prompt-text:hover{
+    -fx-background-color: #fdb147;
+    -fx-font-family: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 18px;
+}
+
+.form{
+    -fx-opacity: 1;
+    -fx-border-radius: 50px;
+}
+
+.signup-text{
+    -fx-opacity: 1;
+    -fx-font-familys: Ubuntu;
+    -fx-text-fill: #FDFFFC;
+    -fx-font-size: 18px;
+}

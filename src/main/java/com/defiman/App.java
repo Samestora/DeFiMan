@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(@SuppressWarnings("exports") Stage primaryStage) throws IOException {
-        Parent root = loadFXML("fxml/login");
+        Parent root = loadFXML("fxml/signin");
         scene = new Scene(root, 720, 480);
 
         // Movable Undecorated Windows
@@ -33,7 +33,7 @@ public class App extends Application {
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("Defiman Client");
-        primaryStage.setResizable(false);
+        primaryStage.setResizable(true);
         primaryStage.show();
     }
     
