@@ -4,7 +4,7 @@ local.properties
 .settings/
 # Eclipse Core
 .project
-
+target/
 # Locally stored "Eclipse launch configurations"
 *.launch
 

@@ -1,5 +1,0 @@
-module-info.class
-com\defiman\App.class
-com\defiman\SignUpController.class
-com\defiman\ForgotController.class
-com\defiman\SigninController.class
